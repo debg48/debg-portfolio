@@ -182,13 +182,10 @@
   opacity: 0.1;
   pointer-events: none;
   animation: pulseOrbital 8s ease-in-out infinite;
-<<<<<<< HEAD
 }
 
 .projectFeaturedWrapper {
   grid-column: span 2;
-=======
->>>>>>> 493555d (styling improvements add added informations;)
 }
 
 /* Featured project (first one) */
