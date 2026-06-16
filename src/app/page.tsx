@@ -143,6 +143,12 @@ export default function Home() {
                   className={styles.avatarImg}
                 />
               </div>
+<<<<<<< HEAD
+=======
+              <Link href="/projects" className={styles.satelliteCta} aria-label="View projects">
+                →
+              </Link>
+>>>>>>> 493555d (styling improvements add added informations;)
             </div>
           </ScrollReveal>
         </div>

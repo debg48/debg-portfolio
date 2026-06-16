@@ -6,33 +6,40 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footerInner}>
         <div className={styles.footerTop}>
-          <h2 className={styles.footerHeadline}>
-            Let&apos;s build something remarkable together.
-          </h2>
-
-          <div>
-            <div className={styles.footerColHeader}>Navigation</div>
-            <div className={styles.footerLinks}>
-              <Link href="/" className={styles.footerLink}>Home</Link>
-              <Link href="/research" className={styles.footerLink}>Research</Link>
-              <Link href="/projects" className={styles.footerLink}>Projects</Link>
-              <Link href="/hobbies" className={styles.footerLink}>Hobbies</Link>
-              <Link href="/contact" className={styles.footerLink}>Contact</Link>
-            </div>
+          <div className={styles.footerBrand}>
+            <h2 className={styles.footerHeadline}>
+              Let&apos;s build something remarkable together.
+            </h2>
+            <a href="mailto:debgandhar4000@gmail.com" className={styles.contactBtn}>
+              Get in touch
+            </a>
           </div>
 
-          <div>
-            <div className={styles.footerColHeader}>Research</div>
-            <div className={styles.footerLinks}>
-              <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                Google Scholar <span className={styles.externalArrow}>↗</span>
-              </a>
-              <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                arXiv <span className={styles.externalArrow}>↗</span>
-              </a>
-              <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                ORCID <span className={styles.externalArrow}>↗</span>
-              </a>
+          <div className={styles.footerLinkGroups}>
+            <div>
+              <div className={styles.footerColHeader}>Navigation</div>
+              <div className={styles.footerLinks}>
+                <Link href="/" className={styles.footerLink}>Home</Link>
+                <Link href="/research" className={styles.footerLink}>Research</Link>
+                <Link href="/projects" className={styles.footerLink}>Projects</Link>
+                <Link href="/hobbies" className={styles.footerLink}>Hobbies</Link>
+                <Link href="/contact" className={styles.footerLink}>Contact</Link>
+              </div>
+            </div>
+
+            <div>
+              <div className={styles.footerColHeader}>Research</div>
+              <div className={styles.footerLinks}>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                  Google Scholar <span className={styles.externalArrow}>↗</span>
+                </a>
+                <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                  arXiv <span className={styles.externalArrow}>↗</span>
+                </a>
+                <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                  ORCID <span className={styles.externalArrow}>↗</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
