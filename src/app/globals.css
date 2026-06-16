@@ -158,6 +158,9 @@ ul, ol {
   transform: translateY(40px);
   transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
               transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .reveal.revealed {

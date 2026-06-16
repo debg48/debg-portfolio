@@ -69,25 +69,29 @@ const education = [
 
 const featuredProjects = [
   {
-    emoji: "🛡️",
     category: "Machine Learning / Backend",
     title: "Real-time Hate Speech & Misinformation Detection",
-    desc: "Designed and deployed a FastAPI backend on GCP to detect hate speech and misinformation in real time. Integrated Google Perspective API for toxicity detection and Fact Check Tools API.",
+    desc: "Real-time moderation engine to flag toxic content instantly.",
     tech: ["FastAPI", "Python", "GCP", "Perspective API"],
     github: "#",
     live: null,
+    highlight: {
+      label: "Novelty:",
+      value: "Instant flagging",
+      suffix: "with Perspective API"
+    }
   },
   {
-    emoji: "📱",
     category: "Data Extraction / Backend",
-    title: "Recharge Plan Information Extraction (CrazePay)",
-    desc: "Built a Go-based regex extractor to parse plan benefits, automating carrier plan details to eliminate manual operational overhead.",
+    title: "Recharge Plan Information Extraction",
+    desc: "Automated Go pipeline for extracting carrier plan benefits.",
     tech: ["Go", "Regex Extraction", "Data Extraction"],
     github: null,
     live: null,
-    glorifiedMetric: {
-      value: "$10–$50 / month",
-      label: "Saved in Operations"
+    highlight: {
+      label: "Saving",
+      value: "$10–$50/month",
+      suffix: "in operations"
     }
   }
 ];
@@ -139,9 +143,6 @@ export default function Home() {
                   className={styles.avatarImg}
                 />
               </div>
-              <Link href="/projects" className={styles.satelliteCta} aria-label="View projects">
-                →
-              </Link>
             </div>
           </ScrollReveal>
         </div>
@@ -224,35 +225,39 @@ export default function Home() {
             {featuredProjects.map((project, i) => (
               <ScrollReveal key={project.title} delay={i + 1}>
                 <Card className={styles.projectCard}>
-                  <div className={styles.projectMedia}>
-                    <span className={styles.projectEmoji}>{project.emoji}</span>
-                  </div>
                   <div className={styles.projectBody}>
                     <div className={styles.projectEyebrow}>{project.category}</div>
                     <h3 className={styles.projectTitle}>{project.title}</h3>
                     <p className={styles.projectDesc}>{project.desc}</p>
-                    <div className={styles.techStack}>
-                      {project.tech.map((t) => (
-                        <span key={t} className={styles.techBadge}>{t}</span>
-                      ))}
-                    </div>
-                    {project.glorifiedMetric && (
-                      <div className={styles.glorifiedMetric}>
-                        <div className={styles.metricValue}>{project.glorifiedMetric.value}</div>
-                        <div className={styles.metricLabel}>{project.glorifiedMetric.label}</div>
+                    <div className={styles.projectFooter}>
+                      {project.highlight && (
+                        <div className={styles.projectHighlightBox}>
+                          <span className={styles.highlightText}>
+                            {project.highlight.label}{' '}
+                            <strong className={styles.highlightValue}>{project.highlight.value}</strong>{' '}
+                            {project.highlight.suffix}
+                          </span>
+                        </div>
+                      )}
+                      <div className={styles.techStack}>
+                        {project.tech.map((t) => (
+                          <span key={t} className={styles.techBadge}>{t}</span>
+                        ))}
                       </div>
-                    )}
-                    <div className={styles.projectLinks}>
-                      {project.github && (
-                        <a href={project.github} className={styles.projectLink}>
-                          Source code ↗
-                        </a>
-                      )}
-                      {project.live && (
-                        <a href={project.live} className={styles.projectLink}>
-                          Live demo →
-                        </a>
-                      )}
+                      {((project.github || project.live) && (
+                        <div className={styles.projectLinks}>
+                          {project.github && (
+                            <a href={project.github} className={styles.projectLink}>
+                              Source code ↗
+                            </a>
+                          )}
+                          {project.live && (
+                            <a href={project.live} className={styles.projectLink}>
+                              Live demo →
+                            </a>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </Card>

@@ -473,39 +473,43 @@
 }
 
 .projectCard {
-  padding: 0;
+  padding: var(--space-4) !important;
   overflow: hidden;
-  border-radius: var(--radius-stadium);
-  display: flex;
-  flex-direction: column;
-}
-
-.projectMedia {
-  width: 100%;
-  height: 200px;
-  background: var(--white);
-  border-bottom: 1px solid var(--whisper-cream);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.projectEmoji {
-  font-size: 64px;
-  transition: transform var(--transition-slow);
-}
-
-.projectCard:hover .projectEmoji {
-  transform: scale(1.1) rotate(-5deg);
-}
-
-.projectBody {
-  padding: var(--space-4) var(--space-5) var(--space-5);
+  border-radius: var(--radius-consent) !important;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.projectHighlightBox {
+  margin-bottom: var(--space-3);
+  padding: 8px 12px;
+  background: rgba(243, 115, 56, 0.08);
+  border-left: 3px solid var(--signal-orange);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+}
+
+.highlightText {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-black);
+}
+
+.highlightValue {
+  color: var(--signal-orange);
+  font-weight: 700;
+}
+
+.projectBody {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projectFooter {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .projectEyebrow {
@@ -544,7 +548,6 @@
   color: var(--granite);
   line-height: 1.6;
   margin-bottom: var(--space-3);
-  flex-grow: 1;
 }
 
 .techStack {
@@ -589,39 +592,6 @@
 .projectLink:hover {
   background: var(--ink-black);
   color: var(--canvas-cream);
-}
-
-/* Glorified Metric for CrazePay Savings */
-.glorifiedMetric {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, rgba(243, 115, 56, 0.08) 0%, rgba(243, 115, 56, 0.02) 100%);
-  border: 1.5px dashed var(--light-signal-orange);
-  border-radius: var(--radius-consent);
-  padding: var(--space-3);
-  margin-bottom: var(--space-4);
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(243, 115, 56, 0.04);
-}
-
-.metricValue {
-  font-size: 26px;
-  font-weight: 750;
-  color: var(--signal-orange);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  text-shadow: 0 0 16px rgba(243, 115, 56, 0.15);
-}
-
-.metricLabel {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--slate-gray);
-  margin-top: 3px;
 }
 
 /* ===== EDUCATION ===== */

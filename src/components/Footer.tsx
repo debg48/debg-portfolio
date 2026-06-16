@@ -5,11 +5,11 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerInner}>
-        <h2 className={styles.footerHeadline}>
-          Let&apos;s build something remarkable together.
-        </h2>
+        <div className={styles.footerTop}>
+          <h2 className={styles.footerHeadline}>
+            Let&apos;s build something remarkable together.
+          </h2>
 
-        <div className={styles.footerGrid}>
           <div>
             <div className={styles.footerColHeader}>Navigation</div>
             <div className={styles.footerLinks}>
@@ -18,21 +18,6 @@ export default function Footer() {
               <Link href="/projects" className={styles.footerLink}>Projects</Link>
               <Link href="/hobbies" className={styles.footerLink}>Hobbies</Link>
               <Link href="/contact" className={styles.footerLink}>Contact</Link>
-            </div>
-          </div>
-
-          <div>
-            <div className={styles.footerColHeader}>Connect</div>
-            <div className={styles.footerLinks}>
-              <a href="https://github.com/debg48" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                GitHub <span className={styles.externalArrow}>↗</span>
-              </a>
-              <a href="https://linkedin.com/in/debgandhar-ghosh" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                LinkedIn <span className={styles.externalArrow}>↗</span>
-              </a>
-              <a href="mailto:debgandhar4000@gmail.com" className={styles.footerLink}>
-                Email
-              </a>
             </div>
           </div>
 
@@ -48,15 +33,6 @@ export default function Footer() {
               <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
                 ORCID <span className={styles.externalArrow}>↗</span>
               </a>
-            </div>
-          </div>
-
-          <div>
-            <div className={styles.footerColHeader}>More</div>
-            <div className={styles.footerLinks}>
-              <Link href="/hobbies" className={styles.footerLink}>Photography</Link>
-              <Link href="/hobbies" className={styles.footerLink}>Reading</Link>
-              <Link href="/hobbies" className={styles.footerLink}>Music</Link>
             </div>
           </div>
         </div>

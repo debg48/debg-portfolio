@@ -9,6 +9,9 @@
               box-shadow var(--transition-slow),
               border-color var(--transition-slow);
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {

@@ -76,11 +76,8 @@ export default function HobbiesPage() {
                 className={hobby.featured ? styles.hobbyFeaturedWrapper : ''}
               >
                 <Card className={styles.hobbyCard}>
-                  <div className={styles.hobbyPortrait}>
-                    <div className={styles.hobbyPortraitInner}>
-                      {hobby.emoji}
-                      <span className={styles.hobbySatellite}>→</span>
-                    </div>
+                  <div className={styles.hobbyMedia}>
+                    <span className={styles.hobbyEmoji}>{hobby.emoji}</span>
                   </div>
                   <div className={styles.hobbyBody}>
                     <div className={styles.hobbyEyebrow}>{hobby.category}</div>

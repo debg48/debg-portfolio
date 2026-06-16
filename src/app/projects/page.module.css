@@ -41,6 +41,9 @@
   padding: 0;
   overflow: hidden;
   border-radius: var(--radius-stadium);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .projectMedia {
@@ -65,6 +68,9 @@
 
 .projectBody {
   padding: var(--space-4) var(--space-5) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .projectEyebrow {
@@ -124,6 +130,7 @@
 .projectLinks {
   display: flex;
   gap: var(--space-2);
+  margin-top: auto;
 }
 
 .projectLink {
