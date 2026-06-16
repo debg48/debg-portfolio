@@ -1,0 +1,221 @@
+/* ===== PAGE HEADER ===== */
+.pageHeader {
+  padding: var(--space-8) 0 var(--space-6);
+  position: relative;
+}
+
+.pageHeaderInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.ghostTitle {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  font-size: 140px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--whisper-cream);
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: -1;
+  user-select: none;
+  line-height: 1;
+}
+
+/* ===== PROJECTS GRID ===== */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.projectsGrid:has(> *:hover) > *:not(:hover) {
+  opacity: 0.6;
+  transform: scale(0.98);
+}
+
+.projectCard {
+  padding: 0;
+  overflow: hidden;
+  border-radius: var(--radius-stadium);
+}
+
+.projectMedia {
+  width: 100%;
+  height: 220px;
+  background: var(--lifted-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectEmoji {
+  font-size: 64px;
+  transition: transform var(--transition-slow);
+}
+
+.projectCard:hover .projectEmoji {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.projectBody {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+}
+
+.projectEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--slate-gray);
+  margin-bottom: var(--space-1);
+}
+
+.projectEyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--light-signal-orange);
+}
+
+.projectTitle {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink-black);
+  margin-bottom: var(--space-1);
+  line-height: 1.3;
+}
+
+.projectDesc {
+  font-size: 15px;
+  font-weight: 450;
+  color: var(--granite);
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--space-3);
+}
+
+.techBadge {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  background: var(--canvas-cream);
+  color: var(--granite);
+}
+
+.projectLinks {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border-radius: var(--radius-button);
+  border: 1.5px solid var(--ink-black);
+  color: var(--ink-black);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  background: transparent;
+}
+
+.projectLink:hover {
+  background: var(--ink-black);
+  color: var(--canvas-cream);
+}
+
+.projectLinkPrimary {
+  background: var(--ink-black);
+  color: var(--canvas-cream);
+  border-color: var(--ink-black);
+}
+
+.projectLinkPrimary:hover {
+  background: var(--charcoal);
+  color: var(--canvas-cream);
+}
+
+/* Decorative */
+@keyframes pulseOrbital {
+  0%, 100% { transform: scale(1); opacity: 0.1; }
+  50% { transform: scale(1.05); opacity: 0.15; }
+}
+
+.orbitalDecor {
+  position: fixed;
+  bottom: 10%;
+  left: -100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 1.5px solid var(--light-signal-orange);
+  opacity: 0.1;
+  pointer-events: none;
+  animation: pulseOrbital 8s ease-in-out infinite;
+}
+
+.projectFeaturedWrapper {
+  grid-column: span 2;
+}
+
+/* Featured project (first one) */
+.featuredCard {
+}
+
+.featuredCard .projectMedia {
+  height: 280px;
+}
+
+.featuredCard .projectTitle {
+  font-size: 28px;
+}
+
+@media (max-width: 968px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+  .projectFeaturedWrapper {
+    grid-column: span 1;
+  }
+  .featuredCard .projectMedia {
+    height: 220px;
+  }
+  .featuredCard .projectTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ghostTitle {
+    font-size: 72px;
+  }
+  .orbitalDecor {
+    display: none;
+  }
+  .projectMedia {
+    height: 180px;
+  }
+}

@@ -1,0 +1,209 @@
+/* ===== DESIGN TOKENS — Mastercard-Inspired Editorial ===== */
+:root {
+  /* Surface & Background */
+  --canvas-cream: #F3F0EE;
+  --lifted-cream: #FCFBFA;
+  --white: #FFFFFF;
+  --soft-bone: #F4F4F4;
+  --whisper-cream: #E8E2DA;
+
+  /* Primary */
+  --ink-black: #141413;
+  --charcoal: #262627;
+
+  /* Accent */
+  --signal-orange: #CF4500;
+  --light-signal-orange: #F37338;
+  --clay-brown: #9A3A0A;
+
+  /* Neutrals & Text */
+  --slate-gray: #696969;
+  --granite: #555555;
+  --graphite: #565656;
+  --dust-taupe: #D1CDC7;
+
+  /* Semantic */
+  --link-blue: #3860BE;
+
+  /* Shadows */
+  --shadow-nav: rgba(0, 0, 0, 0.04) 0px 4px 24px 0px;
+  --shadow-card: rgba(0, 0, 0, 0.08) 0px 24px 48px 0px;
+  --shadow-dramatic: rgba(0, 0, 0, 0.25) 0px 70px 110px 0px;
+
+  /* Border Radius Scale */
+  --radius-xs: 4px;
+  --radius-button: 20px;
+  --radius-consent: 24px;
+  --radius-stadium: 40px;
+  --radius-pill: 999px;
+
+  /* Spacing (8px base) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* Typography */
+  --font-body: var(--font-inter), 'Sofia Sans', Arial, sans-serif;
+  --font-heading: var(--font-inter), 'Sofia Sans', Arial, sans-serif;
+
+  /* Layout */
+  --max-width: 1280px;
+  --gutter: 48px;
+  --nav-height: 72px;
+  --nav-top-offset: 24px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + var(--nav-top-offset) + 24px);
+}
+
+body {
+  background-color: var(--canvas-cream);
+  color: var(--ink-black);
+  font-family: var(--font-body);
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--link-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--ink-black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ink-black);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h1 { font-size: 64px; line-height: 1; }
+h2 { font-size: 36px; line-height: 1.22; }
+h3 { font-size: 24px; line-height: 1.2; }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ===== EYEBROW LABEL (signature element) ===== */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--slate-gray);
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--light-signal-orange);
+  flex-shrink: 0;
+}
+
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+.reveal-delay-4 { transition-delay: 400ms; }
+.reveal-delay-5 { transition-delay: 500ms; }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--canvas-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dust-taupe);
+  border-radius: var(--radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--slate-gray);
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: rgba(207, 69, 0, 0.12);
+  color: var(--ink-black);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1023px) {
+  h1 { font-size: 48px; }
+  h2 { font-size: 30px; }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 24px;
+    --nav-top-offset: 12px;
+  }
+  h1 { font-size: 40px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 20px; }
+}

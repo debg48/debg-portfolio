@@ -1,0 +1,18 @@
+.card {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-stadium);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-card);
+  border-left: 4px solid var(--light-signal-orange);
+  transition: transform var(--transition-slow),
+              box-shadow var(--transition-slow),
+              border-color var(--transition-slow);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-dramatic);
+  z-index: 2;
+}
