@@ -149,21 +149,31 @@
   height: 100%;
   object-fit: cover;
 <<<<<<< HEAD
+<<<<<<< HEAD
   object-position: center top;
   transform: scale(0.90) translateY(2%);
   transform-origin: bottom center;
 =======
   object-position: center 10%;
 >>>>>>> 493555d (styling improvements add added informations;)
+=======
+  object-position: center top;
+  transform: scale(0.90) translateY(2%);
+  transform-origin: bottom center;
+>>>>>>> 7f90d5b (minor fixes;)
   transition: transform var(--transition-slow);
 }
 
 .avatar:hover .avatarImg {
 <<<<<<< HEAD
+<<<<<<< HEAD
   transform: scale(1.0);
 =======
   transform: scale(1.05);
 >>>>>>> 493555d (styling improvements add added informations;)
+=======
+  transform: scale(1.0);
+>>>>>>> 7f90d5b (minor fixes;)
 }
 
 /* Overlapping Concentric & Floating Bubbles */
