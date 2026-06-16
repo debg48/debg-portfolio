@@ -30,13 +30,13 @@ export default function Footer() {
             <div>
               <div className={styles.footerColHeader}>Research</div>
               <div className={styles.footerLinks}>
-                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                <a href="https://scholar.google.com/citations?user=snLPR60AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
                   Google Scholar <span className={styles.externalArrow}>↗</span>
                 </a>
-                <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                  arXiv <span className={styles.externalArrow}>↗</span>
+                <a href="https://medium.com/@debgandhar4000" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                  Medium <span className={styles.externalArrow}>↗</span>
                 </a>
-                <a href="https://orcid.org" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                <a href="https://orcid.org/0009-0003-5233-7203" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
                   ORCID <span className={styles.externalArrow}>↗</span>
                 </a>
               </div>

@@ -11,6 +11,73 @@
   padding: 0 var(--gutter);
 }
 
+.headerActions {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.scholarBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--canvas-cream);
+  background: var(--ink-black);
+  border: 1.5px solid var(--ink-black);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.scholarBadge:hover {
+  background: var(--charcoal);
+  border-color: var(--charcoal);
+  transform: translateY(-1px);
+}
+
+.scholarBadge .arrow {
+  font-size: 12px;
+  transition: transform var(--transition-fast);
+}
+
+.scholarBadge:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+.orcidBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-black);
+  background: transparent;
+  border: 1.5px solid var(--ink-black);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.orcidBadge:hover {
+  background: var(--ink-black);
+  color: var(--canvas-cream);
+  transform: translateY(-1px);
+}
+
+.orcidBadge .arrow {
+  font-size: 12px;
+  transition: transform var(--transition-fast);
+}
+
+.orcidBadge:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
 .ghostTitle {
   position: absolute;
   top: 0;

@@ -75,6 +75,28 @@ export default function ResearchPage() {
               subtitle="My academic contributions across machine learning, distributed systems, and applied AI."
             />
           </ScrollReveal>
+          <ScrollReveal delay={1}>
+            <div className={styles.headerActions}>
+              <a
+                href="https://scholar.google.com/citations?user=snLPR60AAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.scholarBadge}
+              >
+                <span>Google Scholar Profile</span>
+                <span className={styles.arrow}>↗</span>
+              </a>
+              <a
+                href="https://orcid.org/0009-0003-5233-7203"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.orcidBadge}
+              >
+                <span>ORCID Profile</span>
+                <span className={styles.arrow}>↗</span>
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
