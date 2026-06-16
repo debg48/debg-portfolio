@@ -69,6 +69,19 @@ const education = [
 
 const featuredProjects = [
   {
+    category: "AI / Natural Language Processing",
+    title: "Semantic Recommender System",
+    desc: "CPU-optimized AI product recommender built for SIH 2022, running sub-50ms query latency on lightweight hardware to eliminate GPU hosting costs.",
+    tech: ["FastAPI", "Qdrant", "Sentence-Transformers", "Python"],
+    github: "https://github.com/debg48/SIH_ecom",
+    live: "https://colab.research.google.com/drive/18eI0KWHEa5YUxJXlpZNbXwtt-DzmJZqO?usp=sharing",
+    highlight: {
+      label: "Saving:",
+      value: "~$100+/month",
+      suffix: "(100% GPU cost saved)"
+    }
+  },
+  {
     category: "Machine Learning / Backend",
     title: "Real-time Hate Speech & Misinformation Detection",
     desc: "Real-time moderation engine to flag toxic content instantly.",
@@ -76,9 +89,9 @@ const featuredProjects = [
     github: "#",
     live: null,
     highlight: {
-      label: "Novelty:",
-      value: "Instant flagging",
-      suffix: "with Perspective API"
+      label: "Impact:",
+      value: "Automated user safety",
+      suffix: ""
     }
   },
   {
@@ -89,7 +102,7 @@ const featuredProjects = [
     github: null,
     live: null,
     highlight: {
-      label: "Saving",
+      label: "Saving:",
       value: "$10–$50/month",
       suffix: "in operations"
     }

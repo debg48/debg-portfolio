@@ -32,7 +32,7 @@
   gap: var(--space-3);
 }
 
-.projectsGrid:has(> *:hover) > *:not(:hover) {
+.projectsGrid:has(> *:hover)>*:not(:hover) {
   opacity: 0.6;
   transform: scale(0.98);
 }
@@ -167,8 +167,17 @@
 
 /* Decorative */
 @keyframes pulseOrbital {
-  0%, 100% { transform: scale(1); opacity: 0.1; }
-  50% { transform: scale(1.05); opacity: 0.15; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.15;
+  }
 }
 
 .orbitalDecor {
@@ -189,8 +198,7 @@
 }
 
 /* Featured project (first one) */
-.featuredCard {
-}
+.featuredCard {}
 
 .featuredCard .projectMedia {
   height: 280px;
@@ -204,12 +212,15 @@
   .projectsGrid {
     grid-template-columns: 1fr;
   }
+
   .projectFeaturedWrapper {
     grid-column: span 1;
   }
+
   .featuredCard .projectMedia {
     height: 220px;
   }
+
   .featuredCard .projectTitle {
     font-size: 22px;
   }
@@ -219,10 +230,31 @@
   .ghostTitle {
     font-size: 72px;
   }
+
   .orbitalDecor {
     display: none;
   }
+
   .projectMedia {
     height: 180px;
   }
+}
+
+.projectHighlightBox {
+  margin-bottom: var(--space-3);
+  padding: 8px 12px;
+  background: rgba(243, 115, 56, 0.08);
+  border-left: 3px solid var(--signal-orange);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+}
+
+.highlightText {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-black);
+}
+
+.highlightValue {
+  color: var(--signal-orange);
+  font-weight: 700;
 }
