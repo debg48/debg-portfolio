@@ -46,7 +46,7 @@ const projects = [
     title: "Real-time Hate Speech & Misinformation Detection",
     desc: "Designed and deployed a FastAPI backend on GCP to detect hate speech and misinformation in real time. Integrated Google Perspective API for toxicity detection and Fact Check Tools API.",
     tech: ["FastAPI", "Python", "Google Cloud Platform", "Perspective API"],
-    github: "#",
+    github: "https://github.com/debg48/Hate-Speech-Detection",
     live: null,
     featured: false,
     highlight: {

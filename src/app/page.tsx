@@ -11,6 +11,7 @@ const skills = [
   "CNN/RNN", "Transformer", "GenAI", "FastAPI", "Linux"
 ];
 
+/* eslint-disable @next/next/no-img-element */
 const skillIcons: Record<string, React.ReactNode> = {
   "Python": <img src="https://cdn.simpleicons.org/python" alt="" width="16" height="16" />,
   "Go": <img src="https://cdn.simpleicons.org/go" alt="" width="16" height="16" />,
@@ -105,7 +106,7 @@ const featuredProjects = [
     title: "Real-time Hate Speech & Misinformation Detection",
     desc: "Real-time moderation engine to flag toxic content instantly.",
     tech: ["FastAPI", "Python", "GCP", "Perspective API"],
-    github: "#",
+    github: "https://github.com/debg48/Hate-Speech-Detection",
     live: null,
     highlight: {
       label: "Impact:",
@@ -168,7 +169,6 @@ export default function Home() {
               <div className={styles.bubbleOrange} />
               <div className={styles.bubbleGrey} />
               <div className={styles.avatar}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src="/assets/IMG_20241015_171442_514.webp" 
                   alt="Debgandhar Ghosh" 
