@@ -39,7 +39,7 @@ const experience = [
   },
   {
     date: "06/2025 — 05/2026",
-    role: "Backend and AI consultant and developer (Freelance)",
+    role: "Backend and AI Consultant and Developer (Freelance)",
     org: "CrazePay",
     desc: "Built the entire backend from authentication (login/logout) to recharge APIs, managed CI pipelines, and integrated AWS services like Secrets Manager, S3, and DynamoDB. Also designed a Go-based regex extractor for telecom plan benefits, automating Jio, Airtel, and VI details to save $10–$50/month in operations.",
   },
