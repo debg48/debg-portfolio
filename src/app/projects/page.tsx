@@ -28,16 +28,16 @@ const projects = [
   {
     emoji: "🛒",
     category: "AI / Natural Language Processing",
-    title: "Semantic Recommender System (SIH Winner)",
+    title: "Semantic Recommender System (SIH 2022)",
     desc: "Developed a product recommendation engine utilizing the Sentence-Transformers all-MiniLM-L6-v2 model and Qdrant Cloud. By optimizing the system for CPU-only inference, it runs with sub-50ms latency without requiring costly GPU servers, saving approximately $100–$150/month in cloud infrastructure costs.",
     tech: ["FastAPI", "Qdrant", "Sentence-Transformers", "Python", "YAML"],
     github: "https://github.com/debg48/SIH_ecom",
     live: null,
     featured: false,
     highlight: {
-      label: "Saving:",
+      label: "Estimated Saving:",
       value: "~$100+/month",
-      suffix: "(100% GPU cost saved)"
+      suffix: "(100% GPU cost)"
     }
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     featured: false,
     highlight: {
       label: "Impact:",
-      value: "Automated user safety",
+      value: "Automated user safety on social media platforms",
       suffix: ""
     }
   },
