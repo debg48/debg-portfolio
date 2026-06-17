@@ -3,12 +3,31 @@ import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import ScrollReveal from "@/components/ScrollReveal";
 import Link from "next/link";
+import { Eye, MessageSquare, Cpu, Network, Brain } from "lucide-react";
 
 const skills = [
   "Python", "Go", "Pandas", "Numpy", "TensorFlow", "Keras",
   "OpenCV", "Scikit-Learn", "Computer Vision", "NLP",
   "CNN/RNN", "Transformer", "GenAI", "FastAPI", "Linux"
 ];
+
+const skillIcons: Record<string, React.ReactNode> = {
+  "Python": <img src="https://cdn.simpleicons.org/python" alt="" width="16" height="16" />,
+  "Go": <img src="https://cdn.simpleicons.org/go" alt="" width="16" height="16" />,
+  "Pandas": <img src="https://cdn.simpleicons.org/pandas" alt="" width="16" height="16" />,
+  "Numpy": <img src="https://cdn.simpleicons.org/numpy" alt="" width="16" height="16" />,
+  "TensorFlow": <img src="https://cdn.simpleicons.org/tensorflow" alt="" width="16" height="16" />,
+  "Keras": <img src="https://cdn.simpleicons.org/keras" alt="" width="16" height="16" />,
+  "OpenCV": <img src="https://cdn.simpleicons.org/opencv" alt="" width="16" height="16" />,
+  "Scikit-Learn": <img src="https://cdn.simpleicons.org/scikitlearn" alt="" width="16" height="16" />,
+  "FastAPI": <img src="https://cdn.simpleicons.org/fastapi" alt="" width="16" height="16" />,
+  "Linux": <img src="https://cdn.simpleicons.org/linux" alt="" width="16" height="16" />,
+  "Computer Vision": <Eye size={16} strokeWidth={2.2} />,
+  "NLP": <MessageSquare size={16} strokeWidth={2.2} />,
+  "CNN/RNN": <Cpu size={16} strokeWidth={2.2} />,
+  "Transformer": <Network size={16} strokeWidth={2.2} />,
+  "GenAI": <Brain size={16} strokeWidth={2.2} />
+};
 
 const experience = [
   {
@@ -74,7 +93,7 @@ const featuredProjects = [
     desc: "CPU-optimized AI product recommender built for SIH 2022, running sub-50ms query latency on lightweight hardware to eliminate GPU hosting costs.",
     tech: ["FastAPI", "Qdrant", "Sentence-Transformers", "Python"],
     github: "https://github.com/debg48/SIH_ecom",
-    live: "https://colab.research.google.com/drive/18eI0KWHEa5YUxJXlpZNbXwtt-DzmJZqO?usp=sharing",
+    live: null,
     highlight: {
       label: "Saving:",
       value: "~$100+/month",
@@ -151,7 +170,7 @@ export default function Home() {
               <div className={styles.avatar}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src="/assets/sd-removebg-preview (1).png?v=2" 
+                  src="/assets/IMG_20241015_171442_514.webp" 
                   alt="Debgandhar Ghosh" 
                   className={styles.avatarImg}
                 />
@@ -214,11 +233,15 @@ export default function Home() {
           </ScrollReveal>
           <ScrollReveal delay={1}>
             <div className={styles.skillsContainer}>
-              {skills.map((skill) => (
-                <span key={skill} className={styles.skillBadge}>
-                  {skill}
-                </span>
-              ))}
+              {skills.map((skill) => {
+                const icon = skillIcons[skill];
+                return (
+                  <span key={skill} className={styles.skillBadge}>
+                    {icon}
+                    <span>{skill}</span>
+                  </span>
+                );
+              })}
             </div>
           </ScrollReveal>
         </div>
