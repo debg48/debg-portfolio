@@ -96,9 +96,9 @@ const featuredProjects = [
     github: "https://github.com/debg48/SIH_ecom",
     live: null,
     highlight: {
-      label: "Saving:",
+      label: "Estimated Cost Saving:",
       value: "~$100+/month",
-      suffix: "(100% GPU cost saved)"
+      suffix: "(100% GPU cost avoided)"
     }
   },
   {
@@ -118,7 +118,7 @@ const featuredProjects = [
     category: "Data Extraction / Backend",
     title: "Recharge Plan Information Extraction",
     desc: "Automated Go pipeline for extracting carrier plan benefits.",
-    tech: ["Go", "Regex Extraction", "Data Extraction"],
+    tech: ["Go", "Regex"],
     github: null,
     live: null,
     highlight: {
