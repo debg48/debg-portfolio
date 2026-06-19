@@ -89,6 +89,19 @@ const education = [
 
 const featuredProjects = [
   {
+    category: "Data Extraction / Backend",
+    title: "Recharge Plan Information Extraction",
+    desc: "Automated Go pipeline for extracting carrier plan benefits.",
+    tech: ["Go", "Regex"],
+    github: null,
+    live: null,
+    highlight: {
+      label: "Saving:",
+      value: "$10–$50/month",
+      suffix: "in operations"
+    }
+  },
+  {
     category: "AI / Natural Language Processing",
     title: "Semantic Recommender System",
     desc: "CPU-optimized AI product recommender built for SIH 2022, running sub-50ms query latency on lightweight hardware to eliminate GPU hosting costs.",
@@ -112,19 +125,6 @@ const featuredProjects = [
       label: "Impact:",
       value: "Automated user safety",
       suffix: ""
-    }
-  },
-  {
-    category: "Data Extraction / Backend",
-    title: "Recharge Plan Information Extraction",
-    desc: "Automated Go pipeline for extracting carrier plan benefits.",
-    tech: ["Go", "Regex"],
-    github: null,
-    live: null,
-    highlight: {
-      label: "Saving:",
-      value: "$10–$50/month",
-      suffix: "in operations"
     }
   }
 ];
